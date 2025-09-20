@@ -1,0 +1,212 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffcdb3 ; /* Warna latar belakang dusty peach yang lembut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #4a5568; /* Warna teks utama yang gelap namun lembut */
+}
+
+.container {
+    background-color: #ffffff; /* Kotak konten utama berwarna putih bersih */
+    padding: 3em;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Bayangan yang lebih halus */
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+header h1 {
+    color: #6a6e9a; /* Warna judul biru-ungu pastel */
+    font-weight: 600;
+    margin-bottom: 0.25em;
+    font-size: 2.2em;
+}
+
+header p {
+    color: #8c90b0; /* Warna deskripsi yang lebih terang */
+    font-size: 1em;
+}
+
+#quiz-container {
+    margin-top: 2.5em;
+}
+
+.progress-bar-container {
+    background-color: #e2e8f0;
+    border-radius: 10px;
+    height: 12px;
+    margin-bottom: 2em;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #8a70c2; /* Warna ungu pastel yang menenangkan */
+    transition: width 0.4s ease-in-out;
+}
+
+#question-number {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #6a6e9a;
+    margin-bottom: 0.5em;
+}
+
+#question-text {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #3f4756;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+.options-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.option-label {
+    display: block;
+    background-color: #f7f9fc;
+    padding: 1.5em;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 2px solid #e1e9f0;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+}
+
+.option-label:hover {
+    background-color: #eef2f5;
+    border-color: #d1d9e2;
+    transform: translateY(-3px);
+}
+
+.option-label input[type="radio"] {
+    display: none;
+}
+
+.option-label input[type="radio"]:checked + .option-text {
+    color: #ffffff;
+}
+
+.option-label input[type="radio"]:checked {
+    /* Style saat radio button terpilih, membuat background option-label berubah */
+    background-color: #b39cd0; /* Warna ungu muda yang lebih cerah saat terpilih */
+    border-color: #b39cd0;
+}
+
+.option-label input[type="radio"]:checked + .option-text {
+    color: #fff;
+}
+
+.option-label .option-text {
+    font-size: 1.1em;
+    color: #5a6678;
+    transition: color 0.3s;
+}
+
+#next-btn {
+    margin-top: 2.5em;
+    padding: 1em 3.5em;
+    border: none;
+    border-radius: 50px;
+    background-color: #8a70c2; /* Warna tombol ungu pastel yang sama dengan progress bar */
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 5px 20px rgba(138, 112, 194, 0.4);
+}
+
+#next-btn:hover {
+    background-color: #6a589e;
+    transform: translateY(-3px);
+}
+
+#next-btn:disabled {
+    background-color: #d1d9e2;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#result-container {
+    margin-top: 2.5em;
+}
+
+#result-container h2 {
+    color: #6a6e9a;
+}
+
+#personality-type {
+    color: #8a70c2;
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.result-details {
+    text-align: left;
+    margin-top: 1.5em;
+    line-height: 1.8;
+}
+
+#result-description {
+    font-size: 1em;
+    margin-bottom: 2em;
+    color: #5a6678;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+ul li {
+    background-color: #f7f9fc;
+    border-left: 4px solid;
+    padding: 1em;
+    border-radius: 8px;
+    margin-bottom: 0.75em;
+    font-size: 0.95em;
+}
+
+#strengths-list li {
+    border-color: #92d4c0; /* Hijau mint pastel */
+}
+
+#weaknesses-list li {
+    border-color: #f5a7a7; /* Merah muda pastel */
+}
+
+#restart-btn {
+    margin-top: 2em;
+    padding: 0.8em 2.5em;
+    border: 2px solid #8a70c2;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #8a70c2;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#restart-btn:hover {
+    background-color: #8a70c2;
+    color: #fff;
+}

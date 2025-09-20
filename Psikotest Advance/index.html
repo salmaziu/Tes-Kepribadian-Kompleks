@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Kepribadian Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tes Kepribadian</h1>
+            <p>Jawab 20 pertanyaan ini untuk memahami diri Anda lebih baik.</p>
+        </header>
+
+        <main>
+            <div id="quiz-container">
+                <div class="progress-bar-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <h2 id="question-number">Pertanyaan 1/20</h2>
+                <p id="question-text"></p>
+                <div id="options-container" class="options-group">
+                    <label class="option-label">
+                        <input type="radio" name="answer" value="A">
+                        <span id="option-a" class="option-text"></span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="answer" value="B">
+                        <span id="option-b" class="option-text"></span>
+                    </label>
+                </div>
+                <button id="next-btn" disabled>Selanjutnya</button>
+            </div>
+
+            <div id="result-container" style="display: none;">
+                <h2>Hasil Tes Anda: <span id="personality-type"></span></h2>
+                <div class="result-details">
+                    <p id="result-description"></p>
+                    <ul id="strengths-list"></ul>
+                    <ul id="weaknesses-list"></ul>
+                </div>
+                <button id="restart-btn">Ulangi Tes</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
